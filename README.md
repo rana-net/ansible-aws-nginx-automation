@@ -10,16 +10,28 @@ The solution remotely manages Linux instances over SSH, installs and configures 
 
 ## Architecture
 
+## Architecture
+
 ```text
-VirtualBox Ubuntu (Ansible Control Node)
++----------------------------------+
+| VirtualBox Ubuntu                |
+| (Ansible Control Node)           |
++----------------------------------+
                 |
                 | SSH
                 v
-        AWS EC2 Instances
++----------------------------------+
+| AWS EC2 Instances                |
+| (Managed Nodes)                 |
++----------------------------------+
                 |
                 | Ansible Playbook
                 v
-   Install Nginx + Deploy Web Page
++----------------------------------+
+| Install & Configure Nginx        |
+| Deploy Custom Web Page           |
++----------------------------------+
+```
 ```
 ## Features
 
