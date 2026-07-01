@@ -1,0 +1,27 @@
+---
+- name: Install and start Nginx on AWS server
+  hosts: webservers
+  become: yes
+
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present
+
+    - name: Start and enable Nginx
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+
+    - name: Deploy custom webpage
+      copy:
+        content: |
+          <h1>Hello from Ansible!</h1>
+          <h2>Deployed by Rana Roy using Ansible on AWS EC2</h2>
+        dest: /var/www/html/index.nginx-debian.html
