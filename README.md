@@ -10,8 +10,6 @@ The solution remotely manages Linux instances over SSH, installs and configures 
 
 ## Architecture
 
-## Architecture
-
 ```text
 +----------------------------------+
 | VirtualBox Ubuntu                |
