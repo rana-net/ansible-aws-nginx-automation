@@ -1,4 +1,3 @@
-# ansible-aws-nginx-automation
 
 # Automated AWS EC2 Web Server Deployment using Ansible
 
